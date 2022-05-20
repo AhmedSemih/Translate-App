@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Button({children}) {
+function Button({children,clickTranslate,clickChange,isChangeBtn}) {
   return (
-    <button className='btn'>
+    <button className='btn' onClick={isChangeBtn ? clickChange : clickTranslate}>
         {children}
     </button>
   )

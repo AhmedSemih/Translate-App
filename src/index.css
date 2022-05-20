@@ -1,106 +1,120 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-*{
-  margin:0;
-  padding:0;
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-body{
+
+body {
   background-color: #202020;
-  color:white;
-  height:100vh;
-  display:flex;
+  color: white;
+  height: 100vh;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
+
 ::-webkit-scrollbar {
-    width: 0px;
-    background: transparent;
+  width: 0px;
+  background: transparent;
 }
 
 /* Main Container */
-.container{
+.container {
   max-width: 1000px;
   background-color: #181818;
   border-radius: 1rem;
-  padding:1rem;
-  display:flex;
+  padding: 1rem;
+  display: flex;
   justify-content: space-around;
 }
 
-.right,.left{
-  width:40%;
+.right,
+.left {
+  width: 40%;
 }
 
-.mid{
-  display:flex;
+.mid {
+  display: flex;
   flex-direction: column;
-  height:100%;
+  height: 100%;
 }
 
 /* Language Selector */
-.langSelector{
-  width:100%;
-  padding:.5rem 1rem;
+.langSelector {
+  width: 100%;
+  padding: .5rem 1rem;
   background-color: #181818;
-  border:2px solid #282828;
-  color:white;
+  border: 2px solid #363636;
+  color: white;
   border-radius: .7rem;
 }
 
 /* Text Area */
-.area{
+.area {
   background-color: transparent;
   overflow-y: scroll;
   border: none;
-  border-bottom: 2px solid #282828;
-  width:100%;
-  padding:.5rem;
+  border-bottom: 2px solid #363636;
+  width: 100%;
+  padding: .5rem;
   font-size: 1.5rem;
-  color:white;
-  height:90%;
+  color: white;
+  height: 90%;
 }
-.area:focus{
-outline: none;
+
+.area:focus {
+  outline: none;
 }
 
 /* Button */
-.btn{
-  color:white;
+.btn {
+  color: white;
   font-size: 2rem;
   background-color: transparent;
-  border:none;
-  padding:0 1rem;
+  border: none;
+  padding: 0 1rem;
   margin-bottom: 250%;
+  transition: .5s;
+  cursor: pointer;
 }
-.btn:hover{
-  color:#555;
+
+.btn:hover {
+  color: #555;
 }
 
 /* Responsive */
-@media (max-width:600px){
-  body{
+@media (max-width:600px) {
+  body {
     background-color: #181818;
   }
-  .container{
-    width:100vw;
-    margin:0px;
+
+  .container {
+    width: 100vw;
+    margin: 0px;
     flex-direction: column;
   }
-  .right,.mid,.left{
-    width:100%;
-    height:100%;
+
+  .right,
+  .mid,
+  .left {
+    width: 100%;
+    height: 100%;
   }
-  .area{
-    height:35vh;
+
+  .area {
+    height: 35vh;
   }
-  .mid{
+
+  .mid {
     flex-direction: row;
     justify-content: space-around;
     padding: .5rem;
   }
-  .btn{
+
+  .btn {
     margin-bottom: 0px;
   }
 }
