@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './index.css';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -9,17 +9,12 @@ import TextArea from './components/TextArea';
 
 function App() {
 
-  const [from, setFrom] = useState("tr");
-  const [to, setTo] = useState("en");
+  const [from, setFrom] = useState(localStorage.getItem("from") || "tr");
+  const [to, setTo] = useState(localStorage.getItem("to") || "en");
 
   const [text, setText] = useState("");
   const [translation, setTranslation] = useState("");
 
-  useEffect(()=>{
-    setFrom(localStorage.getItem("from"));
-    setTo(localStorage.getItem("to"));
-  },[])
-  
   const clickChange = () => {
     let oldFrom = from;
     let oldText = text;
