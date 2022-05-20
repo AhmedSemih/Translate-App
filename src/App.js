@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect,useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faArrowRightArrowLeft,faPlay} from '@fortawesome/free-solid-svg-icons';
 import './index.css';
@@ -7,6 +7,13 @@ import Button from './components/Button';
 import TextArea from './components/TextArea';
 
 function App() {
+
+  const [langSupport,setLangSupport]=useState();
+
+  useEffect(()=>{
+
+  },[])
+
 
   return (
       <div className='container'>
@@ -21,7 +28,7 @@ function App() {
         <div className='right'>
         <LanguageSelector />
         <TextArea></TextArea>
-        </div>
+        </div>   
       </div>    
   )
 }
